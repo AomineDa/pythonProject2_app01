@@ -1,0 +1,52 @@
+MDScreen :
+    md_bg_color :[35/255,59/255,54/255,1]
+    MDCard :
+        size_hint: None,None
+        size: 320,400
+        pos_hint: {"center_x":.5,"center_y":.5}
+        elevation: 15
+        md_bg_color: [35/255,49/255,48/255,1]
+        padding: 20
+        spacing: 30
+        orientation: "vertical"
+        MDLabel:
+            text: 'Авторизация'
+            font_style: 'Button'
+            font_size: 30
+            halign: "center"
+            size_hint_y: None
+            height: self.texture_size[1]
+            padding_y: 15
+        MDTextField:
+            hint_text: "Имя пользователя"
+            mode: "rectangle"
+            hint_text_color_normal: "white"
+            line_color_normal: "white"
+            line_color_focus: "white"
+            icon_right: "account"
+            size_hint_x: None
+            width: 220
+            font_size: 20
+            pos_hint: {"center_x":.5}
+            color_active: [1,1,1,1]
+        MDTextField:
+            hint_text: "Пароль"
+            mode: "rectangle"
+            hint_text_color_normal: "white"
+            line_color_normal: "white"
+            line_color_focus: "white"
+            md_bg_color: [0,0,0,0]
+            icon_right: "eye-off"
+            size_hint_x: None
+            width: 220
+            font_size: 20
+            pos_hint: {"center_x":.5}
+            color_active: [1,1,1,1]
+            password: True
+        MDRoundFlatButton:
+            text: 'Войти'
+            pos_hint: {"center_x":.5}
+            font_size: 15
+        Widget:
+            size_hint_y: None
+            height: 30
